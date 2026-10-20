@@ -55,6 +55,14 @@ var CONFIG = {
     img.addEventListener("error", function () { img.setAttribute("hidden", ""); });
   });
 
+  /* ---------- Before / After 比較スライダー ---------- */
+  document.querySelectorAll(".ba__stage").forEach(function (stage) {
+    var range = stage.querySelector(".ba__range");
+    function set() { stage.style.setProperty("--pos", range.value + "%"); }
+    range.addEventListener("input", set);
+    set();
+  });
+
   /* ---------- ヘッダー背景 ---------- */
   var header = document.querySelector(".site-header");
   function onScroll() { header.classList.toggle("is-scrolled", window.scrollY > 20); }

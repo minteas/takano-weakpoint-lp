@@ -58,10 +58,25 @@ for img in re.findall(r"<img\b[^>]*>", html):
     if "alt=" not in img:
         errors.append(f"alt がない img: {img[:80]}")
 
-# 6. 画像
-for name, label in [("ogp.jpg", "OGP画像"), ("hero.jpg", "ファーストビュー写真"), ("trainer.jpg", "トレーナー写真")]:
-    if not (ROOT / "images" / name).exists():
-        (errors if name != "hero.jpg" else warns).append(f"images/{name}（{label}）がありません")
+# 6. 仮素材・仮数値（公開時に残してはいけないもの）
+visible = re.sub(r"<[^>]+>", " ", text)
+for w, why in [("XX", "仮数値（実績・期間など）"), ("サンプル表示", "サンプル表示のラベル"), ("仮画像", "仮画像のラベル"),
+               ("仮プラン", "仮プランのラベル"), ("SAMPLE", "Before/After の SAMPLE 表示")]:
+    n = visible.count(w)
+    if n:
+        errors.append(f"{why}が {n} 箇所残っています（「{w}」）")
+for f, why in [("images/stock/coach.webp", "トレーナー写真が仮画像のまま"),
+               ("images/stock/sample-before.webp", "Before写真が仮画像のまま"),
+               ("images/stock/sample-after.webp", "After写真が仮画像のまま")]:
+    if f in html:
+        errors.append(f"{why}（{f}）")
+if "images/stock/hero.webp" in html:
+    warns.append("ファーストビュー写真が仮画像（Unsplash）のままです。選手・本人写真への差し替えを推奨")
+for src in set(re.findall(r'src="(images/[^"]+)"', html)):
+    if not (ROOT / src).exists():
+        errors.append(f"画像ファイルがありません: {src}")
+if not (ROOT / "images" / "ogp.jpg").exists():
+    errors.append("images/ogp.jpg（OGP画像）がありません")
 
 # 7. CTA
 ctas = re.findall(r'data-cta-location="([^"]+)"', html)
