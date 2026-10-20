@@ -124,7 +124,7 @@ h1, h2, h3, .part__jp, .final__lead, .bignum__t { word-break: auto-phrase; }
 .hero__eyebrow span { display: block; font-family: var(--font-en); font-weight: 600; font-size: 12px; letter-spacing: 0.26em; color: var(--blue); margin-bottom: 4px; }
 .hero__title {
   margin-top: 10px; font-weight: 900; line-height: 1.08; letter-spacing: -0.01em;
-  font-size: clamp(60px, 19vw, 136px); text-shadow: 0 6px 40px rgba(0, 0, 0, 0.6);
+  font-size: clamp(52px, 17vw, 136px); white-space: nowrap; text-shadow: 0 6px 40px rgba(0, 0, 0, 0.6);
 }
 .hero__lead { margin-top: 18px; font-size: 15px; color: #e4e6ea; line-height: 1.85; }
 .hero__lead strong { border-bottom: 1px solid var(--silver); }
