@@ -126,7 +126,7 @@ h1, h2, h3, h4, .pain__text, .cta-block__text, .final__lead, .reason-bridge { wo
 .eyebrow__en { display: block; font-family: var(--font-en); font-weight: 600; font-size: 12px; letter-spacing: 0.24em; color: var(--blue); margin-bottom: 8px; }
 .hero__title {
   margin-top: 18px; font-weight: 900; line-height: 1.32; letter-spacing: 0.01em;
-  font-size: clamp(34px, 9.6vw, 76px);
+  font-size: clamp(46px, 14vw, 104px);
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 .hero__lead { margin-top: 20px; font-size: 15px; color: #e1e3e7; line-height: 1.9; }
@@ -459,7 +459,7 @@ h1, h2, h3, h4, .pain__text, .cta-block__text, .final__lead, .reason-bridge { wo
 }
 
 @media (min-width: 1100px) {
-  .hero__title { font-size: 80px; }
+  .hero__title { font-size: 112px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
