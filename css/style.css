@@ -316,6 +316,7 @@ h1, h2, h3, .part__jp, .final__lead, .bignum__t { word-break: auto-phrase; }
 /* ---------- 2. Results (before/after) ---------- */
 .results { background: var(--bg); padding: 72px 0 48px; border-bottom: 1px solid var(--line); }
 .results__en { font-family: var(--font-en); font-weight: 800; font-style: italic; font-size: 15px; letter-spacing: 0.3em; color: var(--blue); margin-bottom: 8px; }
+.results__title { font-size: clamp(22px, 7.3vw, 72px); white-space: nowrap; }
 .ba { margin-top: 28px; }
 .ba__pair { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 0 calc(var(--gutter) * -1); }
 .ba__col { position: relative; aspect-ratio: 3 / 4.4; overflow: hidden; background: #000; }
