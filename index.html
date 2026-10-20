@@ -15,14 +15,14 @@
 <meta property="og:site_name" content="パーソナルジム ミンティーズ（Mintea's）" />
 <meta property="og:title" content="弱点は伸びしろだ｜弱点部位特化型オンラインパーソナル" />
 <meta property="og:description" content="フィジーク・ボディビル競技者のための、高野トレーナーによる弱点部位特化型オンラインパーソナル。" />
-<!-- TODO(OGP): images/ogp.jpg は仮画像（Unsplash）から作成。本人・選手写真で作り直し推奨 -->
+<!-- OGP: images/ogp.jpg はファーストビュー写真から作成 -->
 <meta property="og:image" content="https://minteas.github.io/takano-weakpoint-lp/images/ogp.jpg" />
 <meta property="og:url" content="https://minteas.github.io/takano-weakpoint-lp/" />
 <meta property="og:locale" content="ja_JP" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-<link rel="preload" as="image" href="images/stock/hero.webp" fetchpriority="high" />
+<link rel="preload" as="image" href="images/photos/hero.webp" fetchpriority="high" />
 
 <!-- ANALYTICS: GTMのコンテナIDが決まったら、下のコメントを外して GTM-XXXXXXX を差し替え。
      CTAクリックは dataLayer に event: "cta_click" で送信済み（js/main.js）。
@@ -69,20 +69,47 @@
 <main id="main">
 
   <!-- ============ 1｜ファーストビュー：全面写真＋大きなキャッチ ============ -->
-  <!-- 写真差し替え: images/stock/hero.webp（仮画像）。本番は選手・本人写真推奨。縦長、人物はやや右寄せ -->
+  <!-- 写真: images/photos/hero.webp（提供写真） -->
   <section class="hero" aria-labelledby="hero-title">
     <figure class="hero__media">
-      <img src="images/stock/hero.webp" alt="" width="1000" height="1432" fetchpriority="high" decoding="async" />
-      <figcaption class="img-tag">イメージ写真</figcaption>
+      <img src="images/photos/hero.webp" alt="大会でトロフィーを掲げるフィジーク選手" width="1000" height="1500" fetchpriority="high" decoding="async" />
     </figure>
     <div class="hero__inner">
       <p class="hero__eyebrow"><span>PHYSIQUE / BODYBUILDING</span>コンテスト出場者のための</p>
       <h1 class="hero__title" id="hero-title"><span class="nb">弱点は</span><br class="sp-only" /><span class="nb">伸びしろだ</span></h1>
-      <p class="hero__lead">肩の横幅、胸の上部、背中の広がり。<br />伸び悩む部位を、<strong>高野トレーナー</strong>が<br class="sp-only" />オンラインで見直します。</p>
+      <p class="hero__lead">伸び悩む部位を、<strong>高野トレーナー</strong>が<br class="sp-only" />オンラインで見直します。</p>
       <div class="hero__cta">
         <a class="btn btn--lg js-cta" href="#contact" data-cta-location="fv">弱点部位について相談する<span class="btn__arrow" aria-hidden="true"></span></a>
         <p class="cta-note"><span data-todo="相談の受付方法・無料かどうか">LINEで受付・相談無料（予定）</span></p>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ 2｜Before / After（提供写真） ============ -->
+  <!-- TODO(CASES): 写真の本人同意・大会公式写真（FWJ）の利用可否を確認。期間・部位・大会を記入 -->
+  <section class="section results" id="results" aria-labelledby="results-title">
+    <div class="container">
+      <p class="results__en reveal" aria-hidden="true">BEFORE / AFTER</p>
+      <h2 class="h-xl reveal" id="results-title">背中は、<br class="sp-only" />ここまで変わる。</h2>
+      <figure class="ba reveal">
+        <div class="ba__pair">
+          <div class="ba__col">
+            <img src="images/photos/before.webp" alt="BEFORE：トレーニング開始前の背中" width="800" height="1067" loading="lazy" decoding="async" />
+            <span class="ba__tag">BEFORE</span>
+          </div>
+          <span class="ba__arrow" aria-hidden="true"></span>
+          <div class="ba__col">
+            <img src="images/photos/after.webp" alt="AFTER：大会ステージでのバックポーズ" width="800" height="1240" loading="lazy" decoding="async" />
+            <span class="ba__tag ba__tag--after">AFTER</span>
+          </div>
+        </div>
+        <dl class="ba__meta" data-todo="Before/Afterの期間・重点部位・大会">
+          <div><dt>期間</dt><dd>XX</dd></div>
+          <div><dt>重点部位</dt><dd>XX</dd></div>
+          <div><dt>大会</dt><dd>XX</dd></div>
+        </dl>
+      </figure>
+      <p class="note">※個人の結果であり、変化には個人差があります。</p>
     </div>
   </section>
 
@@ -337,31 +364,6 @@
         <p>どこから変えるべきか、まずは話してみませんか。</p>
         <a class="btn btn--lg js-cta" href="#contact" data-cta-location="after_service">弱点部位について相談する<span class="btn__arrow" aria-hidden="true"></span></a>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ 7｜事例：大きな比較写真 ============ -->
-  <!-- TODO(CASES): 仮画像。本人の同意を得た「同一人物・同条件」の写真のみ掲載。用意できなければセクションごと削除 -->
-  <section class="section results" id="results" aria-labelledby="results-title">
-    <div class="container">
-      <h2 class="h-xl reveal" id="results-title">変化は、<br class="sp-only" />写真で見せる。</h2>
-      <figure class="ba reveal" data-todo="Before/After写真（同一人物・同意済み）">
-        <div class="ba__stage" style="--pos: 50%">
-          <img class="ba__img" src="images/stock/sample-after.webp" alt="AFTERの仮画像" width="700" height="1050" loading="lazy" decoding="async" />
-          <div class="ba__before"><img class="ba__img" src="images/stock/sample-before.webp" alt="BEFOREの仮画像" width="700" height="1050" loading="lazy" decoding="async" /></div>
-          <span class="ba__tag ba__tag--l">BEFORE</span><span class="ba__tag ba__tag--r">AFTER</span>
-          <span class="ba__handle" aria-hidden="true"></span>
-          <span class="ba__sample" aria-hidden="true">SAMPLE</span>
-          <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="BeforeとAfterの表示比率" />
-        </div>
-        <dl class="ba__meta">
-          <div><dt>期間</dt><dd>XX日</dd></div>
-          <div><dt>重点部位</dt><dd>XX</dd></div>
-          <div><dt>大会</dt><dd>XX</dd></div>
-        </dl>
-        <figcaption class="ba__warn">サンプル表示｜レイアウト確認用の仮画像です。実際の受講者・指導実績ではありません。</figcaption>
-      </figure>
-      <p class="note">※掲載する事例は個人の結果であり、変化には個人差があります。</p>
     </div>
   </section>
 

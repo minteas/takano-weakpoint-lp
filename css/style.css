@@ -113,7 +113,7 @@ h1, h2, h3, .part__jp, .final__lead, .bignum__t { word-break: auto-phrase; }
 /* ---------- 1. Hero ---------- */
 .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; isolation: isolate; }
 .hero__media { position: absolute; inset: 0; z-index: -1; }
-.hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 12%; filter: grayscale(0.25) contrast(1.05); }
+.hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0%; }
 .hero__media::after {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(10, 10, 11, 0.35) 0%, rgba(10, 10, 11, 0) 22%, rgba(10, 10, 11, 0.35) 48%, rgba(10, 10, 11, 0.94) 72%, var(--bg) 100%);
@@ -313,30 +313,22 @@ h1, h2, h3, .part__jp, .final__lead, .bignum__t { word-break: auto-phrase; }
 .cta-inline p { font-weight: 700; font-size: 17px; }
 .cta-inline--plain { margin-top: 40px; }
 
-/* ---------- 7. Results (before/after) ---------- */
-.results { background: var(--bg); }
-.ba { margin-top: 32px; }
-.ba__stage { position: relative; aspect-ratio: 2 / 3; max-height: 82vh; margin: 0 calc(var(--gutter) * -1); overflow: hidden; background: #000; user-select: none; }
-.ba__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.ba__before { position: absolute; inset: 0; clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
-.ba__before .ba__img { filter: grayscale(1) brightness(0.85); }
-.ba__handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 2px; background: #fff; transform: translateX(-1px); z-index: 2; pointer-events: none; }
-.ba__handle::after { content: "‹ ›"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; border-radius: 50%; background: #fff; color: #000; display: grid; place-items: center; font-weight: 700; font-size: 18px; letter-spacing: 2px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); }
-.ba__tag { position: absolute; top: 14px; z-index: 2; font-family: var(--font-en); font-weight: 700; font-size: 14px; letter-spacing: 0.22em; background: rgba(0, 0, 0, 0.6); padding: 4px 10px; }
-.ba__tag--l { left: 14px; } .ba__tag--r { right: 14px; }
-.ba__sample {
-  position: absolute; inset: 0; display: grid; place-items: center; z-index: 1; pointer-events: none;
-  font-family: var(--font-en); font-weight: 800; font-style: italic; font-size: clamp(64px, 22vw, 180px); letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.12); -webkit-text-stroke: 1.5px rgba(224, 180, 90, 0.85); transform: rotate(-12deg);
-}
-.ba__range { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 3; margin: 0; }
-.ba__range:focus-visible + * , .ba__stage:focus-within { outline: 2px solid var(--blue); outline-offset: -2px; }
+/* ---------- 2. Results (before/after) ---------- */
+.results { background: var(--bg); padding: 72px 0 48px; border-bottom: 1px solid var(--line); }
+.results__en { font-family: var(--font-en); font-weight: 800; font-style: italic; font-size: 15px; letter-spacing: 0.3em; color: var(--blue); margin-bottom: 8px; }
+.ba { margin-top: 28px; }
+.ba__pair { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 0 calc(var(--gutter) * -1); }
+.ba__col { position: relative; aspect-ratio: 3 / 4.4; overflow: hidden; background: #000; }
+.ba__col img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; }
+.ba__tag { position: absolute; left: 8px; top: 8px; font-family: var(--font-en); font-weight: 700; font-size: 13px; letter-spacing: 0.22em; background: rgba(0, 0, 0, 0.65); color: var(--silver); padding: 3px 9px; }
+.ba__tag--after { background: #fff; color: #0a0a0b; }
+.ba__arrow { position: absolute; left: 50%; top: 50%; z-index: 2; width: 40px; height: 40px; border-radius: 50%; background: #fff; transform: translate(-50%, -50%); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); }
+.ba__arrow::after { content: ""; position: absolute; left: 13px; top: 14px; width: 10px; height: 10px; border-top: 2px solid #0a0a0b; border-right: 2px solid #0a0a0b; transform: rotate(45deg); }
 .ba__meta { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--line); }
 .ba__meta > div { padding: 14px 10px; border-right: 1px solid var(--line); }
 .ba__meta > div:last-child { border-right: 0; }
 .ba__meta dt { font-size: 11px; color: var(--muted); }
 .ba__meta dd { font-family: var(--font-en); font-weight: 700; font-size: 26px; line-height: 1.1; }
-.ba__warn { margin-top: 12px; font-size: 12px; font-weight: 700; color: var(--warn); }
 
 /* ---------- 8. Trainer ---------- */
 .trainer { position: relative; background: var(--bg-2); border-top: 1px solid var(--line); padding-bottom: 88px; }
@@ -441,11 +433,11 @@ h1, h2, h3, .part__jp, .final__lead, .bignum__t { word-break: auto-phrase; }
 
   /* hero: text left, photo right */
   .hero { align-items: center; }
-  .hero__media { left: 34%; }
-  .hero__media img { object-position: 50% 15%; }
-  .hero__media::after { background: linear-gradient(90deg, var(--bg) 0%, rgba(10, 10, 11, 0.6) 22%, rgba(10, 10, 11, 0) 55%), linear-gradient(180deg, rgba(10, 10, 11, 0) 70%, var(--bg) 100%); }
+  .hero__media { left: 46%; }
+  .hero__media img { object-position: 50% 18%; }
+  .hero__media::after { background: linear-gradient(90deg, var(--bg) 0%, rgba(10, 10, 11, 0.5) 18%, rgba(10, 10, 11, 0) 40%), linear-gradient(180deg, rgba(10, 10, 11, 0) 70%, var(--bg) 100%); }
   .hero__inner { padding-top: var(--header-h); padding-bottom: 0; }
-  .hero__title { font-size: clamp(96px, 11vw, 148px); }
+  .hero__title { font-size: clamp(76px, 7.6vw, 120px); }
   .hero__lead { font-size: 17px; }
 
   .proof { padding: 40px 0 48px; }
@@ -473,9 +465,10 @@ h1, h2, h3, .part__jp, .final__lead, .bignum__t { word-break: auto-phrase; }
   .method__grid { grid-template-columns: 1fr 380px; gap: 80px; align-items: center; }
   .bignum__n { font-size: 132px; }
 
-  .ba__stage { margin: 0 auto; max-width: 720px; aspect-ratio: 4 / 5; }
-  .ba__meta { max-width: 720px; margin: 0 auto; }
-  .ba__warn, .results .note { max-width: 720px; margin-left: auto; margin-right: auto; }
+  .ba__pair { margin: 0 auto; max-width: 860px; gap: 8px; }
+  .ba__meta, .results .note { max-width: 860px; margin-left: auto; margin-right: auto; }
+  .ba__arrow { width: 52px; height: 52px; }
+  .ba__arrow::after { left: 17px; top: 19px; width: 12px; height: 12px; }
 
   .trainer { display: grid; grid-template-columns: 1fr 1fr; padding-bottom: 0; }
   .trainer__photo { aspect-ratio: auto; min-height: 100%; }
