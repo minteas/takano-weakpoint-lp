@@ -449,6 +449,7 @@ h1, h2, h3, .part__jp, .final__lead, .bignum__t { word-break: auto-phrase; }
   .part { aspect-ratio: 3 / 4.2; }
   .part:hover img { transform: scale(1.04); }
   .part__body { left: 24px; bottom: 24px; }
+  .part__jp { font-size: clamp(24px, 2.6vw, 34px); }
 
   .view__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 64px; align-items: start; }
   .view__head { grid-column: 1; }
