@@ -6,9 +6,7 @@
 
 | ファイル | 用途 | 元写真 | 本番での扱い |
 |---|---|---|---|
-| part-shoulder.webp | 悩み：肩 | https://unsplash.com/photos/9y4MaTz2Js0 | イメージ写真として継続利用可 |
-| part-chest.webp | 悩み：胸上部 | https://unsplash.com/photos/uQ9CSV9eJYw | イメージ写真として継続利用可 |
-| part-back.webp | 悩み：背中 | https://unsplash.com/photos/_nUKpvm9I0w | イメージ写真として継続利用可 |
+| part-chest.webp | 指導イメージ STEP1 | https://unsplash.com/photos/uQ9CSV9eJYw | イメージ写真として継続利用可 |
 | analysis.webp | 分析の注釈 | https://unsplash.com/photos/tM-AOYwCK_Y | イメージ写真として継続利用可 |
 | form-flat.webp | フォーム比較・動画 | https://unsplash.com/photos/fGAgXh6QQEU | 差し替え推奨（指導風景） |
 | form-incline.webp | フォーム比較 | https://unsplash.com/photos/Pv97-3sdjdY | 差し替え推奨（指導風景） |
@@ -22,5 +20,6 @@
 |---|---|---|
 | hero.webp | ファーストビュー | 本人の掲載同意・FWJ大会公式写真の利用可否 |
 | before.webp / after.webp | Before / After | 本人の掲載同意・FWJ大会公式写真の利用可否 |
+| part-shoulder.webp / part-chest.webp / part-back.webp | 悩み：肩・胸上部・背中 | 写真の利用権 |
 
 メタデータ（撮影情報など）は変換時に削除済み。
